@@ -1,0 +1,28 @@
+/* img{
+    width: 100px;
+    height: 100px;
+} */
+
+.min-width{
+
+    width: 100px;
+    height: 100px;
+
+}
+#firstPara{
+
+
+    font-size: 1.2em;
+    color: #AA5577;
+}
+
+.high-light{
+
+    font-size: 1.4em;
+    color: #FF6688;
+}
+
+.thin-border{
+
+    border: 1px solid blue;
+}
