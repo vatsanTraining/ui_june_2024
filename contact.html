@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link rel="stylesheet" href="styles/global.css">
-
+    <link rel="stylesheet" href="styles/global.css" />
   </head>
   <body>
     <img src="images/logo.png" alt="Company Logo" />
@@ -16,5 +15,38 @@
       <li>Pune</li>
       <li>Gurugram</li>
     </ul>
+
+    <h2>Contact Details</h2>
+
+    <table>
+      <thead class="tbl-head-2x">
+        <tr>
+          <th>Sl.No</th>
+          <th>Department</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <!-- child >
+      cardinality *
+      sibiling +
+      group () -->
+      <tbody class="tbl-body-2x">
+        <tr>
+          <td>1</td>
+          <td>Admin</td>
+          <td>Ramesh</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sales</td>
+          <td>Rajesh</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Next</td>
+        </tr>
+      </tfoot>
+    </table>
   </body>
 </html>

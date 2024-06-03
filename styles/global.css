@@ -26,3 +26,28 @@
 
     border: 1px solid blue;
 }
+
+table{
+
+    border: 1px solid blue;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+tr,td,th{
+    border: 1px solid blue;
+}
+
+.tbl-body-2x{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+.tbl-head-2x{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
