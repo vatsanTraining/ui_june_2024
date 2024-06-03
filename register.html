@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registeration</title>
-    <link rel="stylesheet" href="styles/global.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registeration</title>
+  <link rel="stylesheet" href="styles/global.css" />
+</head>
+
+<body>
+
+  <header>
     <img src="images/logo.png" alt="Company Logo" />
-  </body>
+    <nav class="nav">
+
+      <a href="register.html">Register</a>
+      <a href="blog.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section>
+    <article>
+      <form action="contact.html" method="get">
+
+        <label for="customerName">Customer Name</label>
+        <input type="text" name="customerName" id="customerName">
+
+        <label for="dateOfBirth">Date Of Birth</label>
+        <input type="date" name="dateOfBirth" id="dateOfBirth">
+
+        <label for="email">Email Id</label>
+        <input type="email" name="email" id="email">
+
+        <label for="city">City</label>
+        <select name="city" id="city">
+          <optgroup label="Tamil Nadu">
+            <option value="CHN">Chennai</option>
+            <option value="CBE">Coimbatore</option>
+
+          </optgroup>
+          <optgroup label="Andhra">
+            <option value="NLR">Nellore</option>
+            <option value="KAK">Kakinada</option>
+
+          </optgroup>
+        </select>
+
+        <!-- Create a CheckBox  to take skill sets as input-->
+
+        <label for="skillSet">Skill Set</label>
+
+        <input type="checkbox" name="skillset" id="skillSet" value="Java">
+        <span>Java</span>
+
+        <input type="checkbox" name="skillset" id="skillSet" value="DotNet">
+        <span>DotNet</span>
+
+        <!-- create a Radio button to accept subscribe for mailing list-->
+
+        <label for="mailList">Mail List</label>
+        <input type="radio" name="mailList" id="mailList" value="subscribe">
+        <span>Subscribe</span>
+
+        <input type="radio" name="mailList" id="mailList" value="unsubscribe">
+        <span>Un Subscribe</span>
+
+
+        <input type="submit" value="Register">
+      </form>
+    </article>
+  </section>
+  <footer style="background-color: aqua;">
+    <a href="mailto:ram@abc.com">Contact Admin</a>
+    <p>Designed By : Ram Infoteck &copy; 2024-2036</p>
+  </footer>
+</body>
+
 </html>
