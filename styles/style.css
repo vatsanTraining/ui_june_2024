@@ -1,0 +1,64 @@
+/* Universal Selector */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*  Id Based Selector*/
+#pageHeading{
+
+    text-align: center;
+    color: brown;
+}
+
+
+/*  Name Based Selector*/
+
+footer{
+
+    font-size: 0.8em;
+}
+
+/*  Class Selector*/
+
+.centerText{
+
+    text-align: center;
+}
+
+/* Grouping Selectors */
+
+
+/*  Descendent  Selector*/
+/* only list items ul will be applied with color and not ol */
+
+ul>li{
+    color: blueviolet;
+}
+
+/*  Adjancent  Selector*/
+
+#first+section{
+
+    font-weight: bolder;
+
+}
+
+/* Attribute Selector */
+img[src='images/doctor1.png']{
+
+    width: 80px;
+    height: 80px;
+    border: 1px solid brown;
+}
+
+img[src$='.png']{
+
+    width: 100px;
+    height: 100px;
+    border: 2px solid gold;
+}
+
+/* Pseudo Classes */
+
+/* Pseduo Element */
