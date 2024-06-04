@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer {
+
+            width: 200px;
+            height: 250px;
+            border: 4px solid blue;
+        }
+
+        #inner {
+
+            width: 100px;
+            height: 150px;
+            border: 4px dotted red;
+            margin: 10px 20px 40px 10px;
+            /*toprightbottomleft*/
+            padding: 10px 20px 30p 40px
+                /*toprightbottomleft*/
+        }
+
+        .container {
+            width: 800px;
+            height: 200px;
+            border: 1px solid grey;
+        }
+
+        .content {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="outer">
+        <div id="inner"></div>
+
+    </div>
+
+    <div class="container">
+        <div class="content" style="background-color: gold;"></div>
+        <div class="content" style="background-color: green;"></div>
+        <div class="content" style="background-color: cadetblue; float: right;"></div>
+        <div class="content" style="background-color: blueviolet; float: right;"></div>
+    </div>
+
+    <div class="container-one">
+
+        <div class="content-one" style="background-color: #FF99AA;"></div>
+        <div class="content-one" style="background-color: #AA1122;"></div>
+
+    </div>
+</body>
+
+</html>

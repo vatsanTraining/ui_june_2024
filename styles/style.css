@@ -16,9 +16,14 @@
 
 footer{
 
-    font-size: 0.8em;
+    font-size: 1.8em ;
+
 }
 
+footer>p{
+
+    font-size: 0.8em ;
+}
 /*  Class Selector*/
 
 .centerText{
