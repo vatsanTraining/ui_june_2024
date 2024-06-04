@@ -35,6 +35,24 @@
             height: 100px;
             display: inline-block;
         }
+
+        .small-box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .content-one {
+
+            position: relative;
+            left: 80px;
+
+        }
+
+        .content-two {
+            position: absolute;
+            left: 20px;
+
+        }
     </style>
 </head>
 
@@ -52,10 +70,10 @@
         <div class="content" style="background-color: blueviolet; float: right;"></div>
     </div>
 
-    <div class="container-one">
+    <div class="container">
 
-        <div class="content-one" style="background-color: #FF99AA;"></div>
-        <div class="content-one" style="background-color: #AA1122;"></div>
+        <div class="content-two small-box" style="background-color: #FF99AA;">Absolute</div>
+        <div class="content-one small-box" style="background-color: #AA1122;">Relative</div>
 
     </div>
 </body>
