@@ -60,5 +60,15 @@ img[src$='.png']{
 }
 
 /* Pseudo Classes */
+#subHeading:hover{
+
+    font-weight: lighter;
+}
+
 
 /* Pseduo Element */
+
+#subHeading::first-letter{
+
+font-size: 1.4em;
+}

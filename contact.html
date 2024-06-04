@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles/global.css" />
-  </head>
-  <body>
-    <img src="images/logo.png" alt="Company Logo" />
 
-    <h4>Locations</h4>
-    <ul>
-      <li>Hyderabad</li>
-      <li>Pune</li>
-      <li>Gurugram</li>
-    </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles/global.css" />
+  <style>
+    tbody>tr:first-child {
 
-    <h2>Contact Details</h2>
+      background-color: aquamarine;
+    }
 
-    <table>
-      <thead class="tbl-head-2x">
-        <tr>
-          <th>Sl.No</th>
-          <th>Department</th>
-          <th>Contact</th>
-        </tr>
-      </thead>
-      <!-- child >
+    tbody>tr:nth-child(odd):hover {
+
+      font-size: 1.2em;
+    }
+
+    tbody>tr:nth-child(even) {
+
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="images/logo.png" alt="Company Logo" />
+
+  <h4>Locations</h4>
+  <ul>
+    <li>Hyderabad</li>
+    <li>Pune</li>
+    <li>Gurugram</li>
+  </ul>
+
+  <h2>Contact Details</h2>
+
+  <table>
+    <thead class="tbl-head-2x">
+      <tr>
+        <th>Sl.No</th>
+        <th>Department</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <!-- child >
       cardinality *
       sibiling +
       group () -->
-      <tbody class="tbl-body-2x">
-        <tr>
-          <td>1</td>
-          <td>Admin</td>
-          <td>Ramesh</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Sales</td>
-          <td>Rajesh</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Next</td>
-        </tr>
-      </tfoot>
-    </table>
-  </body>
+    <tbody class="tbl-body-2x">
+      <tr>
+        <td>1</td>
+        <td>Admin</td>
+        <td>Ramesh</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sales</td>
+        <td>Rajesh</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Purchase</td>
+        <td>Rakesh</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Pre-Sales</td>
+        <td>Ranjan</td>
+      </tr>
+
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Next</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
 </html>
