@@ -80,9 +80,11 @@ font-size: 1.4em;
 
 .box{
     width: 250px;
-    height: 150px;
+    height: 250px;
     display: inline-block;
     border: 1px solid blue;
+    position: relative;
+    margin-left: 70px;
 
 }
 
@@ -91,4 +93,15 @@ ul>li{
     margin-left: 0px;
     list-style-position: inside;
     text-align: left;
+
+
+}
+
+section{
+    font-family: 'oswald';
+    font-style: italic;
+}
+@font-face {
+    font-family: 'oswald';
+    src: url('https://fonts.googleapis.com/css2?family=Oswald');
 }
