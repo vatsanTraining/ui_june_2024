@@ -5,7 +5,7 @@
 }
 
 /*  Id Based Selector*/
-#pageHeading{
+#pageHeading, h4{
 
     text-align: center;
     color: brown;
@@ -47,15 +47,15 @@ ul>li{
 /* Attribute Selector */
 img[src='images/doctor1.png']{
 
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border: 1px solid brown;
 }
 
 img[src$='.png']{
 
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border: 2px solid gold;
 }
 
@@ -71,4 +71,19 @@ img[src$='.png']{
 #subHeading::first-letter{
 
 font-size: 1.4em;
+}
+
+.box{
+    width: 250px;
+    height: 150px;
+    display: inline-block;
+    border: 1px solid blue;
+
+}
+
+ul>li{
+
+    margin-left: 0px;
+    list-style-position: inside;
+    text-align: left;
 }
