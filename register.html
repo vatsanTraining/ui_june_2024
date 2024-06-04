@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registeration</title>
   <link rel="stylesheet" href="styles/global.css" />
+
+  <script>
+
+  </script>
 </head>
 
 <body>
@@ -19,12 +23,12 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <section>
+  <section id="section">
     <article>
-      <form action="contact.html" method="get">
+      <form action="contact.html" method="get" id="form">
 
         <label for="customerName">Customer Name</label>
-        <input type="text" name="customerName" id="customerName" required >
+        <input type="text" name="customerName" id="customerName" required>
 
         <label for="dateOfBirth">Date Of Birth</label>
         <input type="date" name="dateOfBirth" id="dateOfBirth">
@@ -67,7 +71,7 @@
         <span>Un Subscribe</span>
 
 
-        <input type="submit" value="Register" disabled="!form.valid">
+        <input type="submit" value="Register">
       </form>
     </article>
   </section>
@@ -75,6 +79,8 @@
     <a href="mailto:ram@abc.com">Contact Admin</a>
     <p>Designed By : Ram Infoteck &copy; 2024-2036</p>
   </footer>
+
+  <button onclick="add()">Add</button>
 </body>
 
 </html>
