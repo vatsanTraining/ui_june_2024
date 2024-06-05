@@ -54,7 +54,11 @@ obj.attachEvent()
 console.log(obj.user)
 
 
-
 // greet() //window.greet()
  //alert()  //window.alert()
 
+
+ (function(){
+
+
+ })();

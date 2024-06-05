@@ -28,7 +28,11 @@
       <form action="contact.html" method="get" id="form">
 
         <label for="customerName">Customer Name</label>
+        <!-- ADD a Blur Event and Capture the value entered in the text field-->
+        <!-- if the customer name is more than 8 charscter print a message Valid in green color-->
+        <!-- else print invalid in red color-->
         <input type="text" name="customerName" id="customerName" required>
+        <span id="msg"></span>
 
         <label for="dateOfBirth">Date Of Birth</label>
         <input type="date" name="dateOfBirth" id="dateOfBirth">
