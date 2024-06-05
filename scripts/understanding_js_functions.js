@@ -47,18 +47,18 @@ const result3 =functionTakingAnotherFunAsArg(simpleWithDefaultValue)
 
 
 
-// simple('ram',45)
-// simple('shyam')  // first argument is shyam and second become undefined
-// simple()   // both the argument becomes undefined
+simple('ram',45)
+simple('shyam')  // first argument is shyam and second become undefined
+simple()   // both the argument becomes undefined
 
-// simpleWithDefaultValue('ram',45)
-// simpleWithDefaultValue('shyam')  // first argument is shyam and second becomes shiv
-// simpleWithDefaultValue() //arguments become shiv and 50
+simpleWithDefaultValue('ram',45)
+simpleWithDefaultValue('shyam')  // first argument is shyam and second becomes shiv
+simpleWithDefaultValue() //arguments become shiv and 50
 
-// const resp =withArgAndReturn(100)
-// console.log(resp)
+const resp =withArgAndReturn(100)
+console.log(resp)
 
-// console.log(namedFunction)
-// namedFunction(60)
+console.log(namedFunction)
+namedFunction(60)
 
-// console.log(namedFunction(90))
+console.log(namedFunction(90))
