@@ -38,7 +38,7 @@ obj.attachEventTypeTwo= function(){
 
 }
 
-obj.attachEventTypeImproper= function(){
+obj.attachEventTypeThree= function(){
 
     var clickBtn = document.getElementById('clickBtn')
 
@@ -53,7 +53,7 @@ obj.attachEventTypeImproper= function(){
 
 //obj.attachEventTypeOne()
 //obj.attachEventTypeTwo()
-obj.attachEventTypeImproper();
+obj.attachEventTypeThree();
 console.log(obj.greet())
 
 
