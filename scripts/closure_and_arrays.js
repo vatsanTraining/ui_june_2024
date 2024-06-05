@@ -72,6 +72,17 @@ array.forEach((element,idx) =>{
 
 }
 
+var obj2 ={}
+
+obj2.firstName = 'ramesh'
+obj2.lastName ='kumar'
+
+obj.concat =function(){
+
+    return obj2.firstName + obj2.lastName
+}
+
+console.log(obj.concat())
 
 function arrayPush(){
 
