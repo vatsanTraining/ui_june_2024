@@ -28,18 +28,76 @@ var obj =(function(){
 
 function outer(){
 
-    let firstName ='Ramesh'
-
-    function display(){
+    // data hiding
+    let firstName ='Ramesh'  // private variable is closed around 
+                             // with annonymous function
+                            // hiding and encapsulating
+    // encapsulation
+       return function(){
         console.log(firstName);   // prints ramesh
+        return firstName
     }
-    display()
 }
 function another(){
-    console.log(firstName);    //execption for another method firstName is 
+
+    let funcRef = outer();
+    console.log(funcRef());    //execption for another method firstName is 
                                // not accessible or its hidden
  
 }
 
-outer()
-another()
+//another()
+
+
+function createInc(startValue) { 
+
+    return function (step) { 
+             startValue += step; 
+             return startValue; 
+     }; 
+}
+
+//  const funcRef = createInc(10)
+
+//  console.log(funcRef(5))
+//  console.log(funcRef(15))
+
+
+const printArray =(array) =>{
+
+array.forEach((element,idx) =>{
+
+    console.log(element)
+})
+
+}
+
+
+function arrayPush(){
+
+
+    let cityList = ['chennai','pune','hyderabad','eluru','guntur']
+
+   cityList.push('delhi','mumbai') // adding to end
+
+   cityList.unshift('Agra')   // at the begining
+
+    cityList.forEach((value,idx)=>{
+
+        console.log(value)
+     })
+
+     const popularcities = cityList.slice(1,4)
+
+     printArray(popularcities)
+
+     
+     const updatedPopulr = popularcities.splice(1)
+
+     printArray(updatedPopulr)
+   
+    
+
+}
+
+arrayPush();
