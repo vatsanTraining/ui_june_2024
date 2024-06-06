@@ -48,7 +48,8 @@ obj.createMenu =function(){
         {attribKey:'href',attribValue:'bookappointment.html',text:"Appointment"},
         {attribKey:'href',attribValue:'blog.html',text:"Blogs"},
         {attribKey:'href',attribValue:'doctor.html',text:"Doctors"},
-        {attribKey:'href',attribValue:'contact.html',text:"Contact"}
+        {attribKey:'href',attribValue:'contact.html',text:"Contact"},
+        {attribKey:'href',attribValue:'showappointment.html',text:"Show Appointment"}
 
     ]
 

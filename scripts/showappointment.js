@@ -4,23 +4,41 @@ var appointment = {}
 
 appointment.attachEvent = function(){
 
+    let form = document.querySelector('form')
 
-     let btnElement = document.querySelector('button');
+     let btnElement = document.querySelector('button')
 
+     console.log(btnElement);
+
+     let btnElementList = document.querySelectorAll('button')
+
+
+     let addFldElement = document.querySelector('#addFld')
 
      btnElement.addEventListener('click',function(event){
 
-        event.preventDefault();
+        event.preventDefault()
 
-          let form = document.querySelector('form');
 
         let slno =form.slno.value
         let doctorName =form.doctorName.value
         let timing = form.timing.value
-        let rowData = {slno:slno,doctorName:doctorName,timing:timing}
+        let extra = form.extra.value
+        let rowData = {slno:slno,doctorName:doctorName,timing:timing,extra:extra}
 
         appointment.createTable(rowData)
-        console.log('inside handler')
+     })
+
+
+     addFldElement.addEventListener('click',function(){
+
+        let inputFld = document.createElement('input');
+      inputFld.setAttribute('type','text')
+      inputFld.setAttribute('name','extra')
+      inputFld.setAttribute('id','extra')
+
+           form.append(inputFld)
+
      })
 }
 
@@ -56,6 +74,19 @@ appointment.createRow = function(data){
          tableData.textContent= values[i]
          tableRow.appendChild(tableData)
     }
+
+    let tdele =document.createElement('td')
+    let deleButton = document.createElement('button')
+    deleButton.textContent ='Delete'
+    tdele.appendChild(deleButton)
+
+    tdele.addEventListener('click',function(){
+
+        alert('delete called')
+    })
+
+    tableRow.append(tdele)
+
    return tableRow;
 
 }
@@ -66,6 +97,8 @@ appointment.createTable = function(...tableData)
 
         let row =appointment.createRow(eachItem)
         tableRef.append(row)
+
+
 
     })
      
