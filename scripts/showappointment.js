@@ -2,6 +2,28 @@
 var appointment = {}
 
 
+appointment.attachEvent = function(){
+
+
+     let btnElement = document.querySelector('button');
+
+
+     btnElement.addEventListener('click',function(event){
+
+        event.preventDefault();
+
+          let form = document.querySelector('form');
+
+        let slno =form.slno.value
+        let doctorName =form.doctorName.value
+        let timing = form.timing.value
+        let rowData = {slno:slno,doctorName:doctorName,timing:timing}
+
+        appointment.createTable(rowData)
+        console.log('inside handler')
+     })
+}
+
 
 appointment.createList = function(list,parentNode,listType){
 
@@ -21,26 +43,23 @@ appointment.createList = function(list,parentNode,listType){
 
 
 }
-
 appointment.createRow = function(data){
 
     const tableRow = document.createElement("tr")
 
-    let colSize = Object.keys(data);
+    let columns = Object.keys(data);
 
-    console.log(colSize)
-    console.log(colSize.length)
-        
+     let values =Object.values(data);
+
+    for(let i =0;i<columns.length;i++){
         let tableData = document.createElement('td')
-         tableData.textContent= data.doctorName
-
+         tableData.textContent= values[i]
          tableRow.appendChild(tableData)
-
+    }
    return tableRow;
 
 }
-
-appointment.createTable = function(tableData)
+appointment.createTable = function(...tableData)
 {
     let tableRef = document.querySelector('table')
     tableData.forEach((eachItem)=>{
@@ -61,6 +80,8 @@ appointment.createList(list,parentNode,'ol')
 
 // appointment.createList(nameList,parentNode,'ul')
 
-let tableData = [{slno:1,doctorName:'rakesh',timing:'weekday 7.00 pm and 8.00pm'}]
 
-appointment.createTable(tableData)
+appointment.createTable(  
+      {slno:1,doctorName:'Rakesh',timing:'weekday 7.00 pm and 8.00pm'})
+
+appointment.attachEvent()

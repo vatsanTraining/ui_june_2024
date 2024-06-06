@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <section class="multi-image-backgrnd">
         <header class="heading">
+            <h1 class="page-head">Book Appointment</h1>
         </header>
 
         <article>
@@ -22,9 +24,20 @@
 
                     <!-- <video src="videos/demo.mp4" controls="on" autoplay=true width="300px" height="300px" muted="false"> -->
 
-                        <!-- <iframe src="videos/demo.mp4" frameborder="0"></iframe> -->
+                    <!-- <iframe src="videos/demo.mp4" frameborder="0"></iframe> -->
                 </aside>
             </figure>
+
+            <form id="frm" action="#">
+                <label for="slno">Sl.No</label>
+                <input type="number" name="slno" id="slno" step="1">
+                <label for="timing">Doctor Name</label>
+                <input type="text" name="doctorName" id="doctorName">
+                <label for="timing">Timing</label>
+                <input type="text" name="timing" id="timing">
+
+                <button id="addBtn">Add</button>
+            </form>
 
 
         </article>
@@ -44,7 +57,45 @@
 
         </article>
 
-        <footer></footer>
+        <footer class="foot-3-col">
+            <div>
+                <div>
+                    <h4>Follow Us</h4>
+                </div>
+                <div>
+
+                    <a href="#"><img src="images/instagram.png" alt=""></a>
+                    <a href="#"><img src="images/linkedin.png" alt=""></a>
+
+                </div>
+            </div>
+            <div>
+
+                <div>
+                    <h4>Know Us</h4>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h4>Our Partners</h4>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Yoga</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </footer>
     </section>
 </body>
 

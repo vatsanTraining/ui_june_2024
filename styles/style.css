@@ -123,14 +123,7 @@ section{
 
 
 }
-.heading{
 
-    width: 85%;
-    height: 10%;
-    background-image: 
-             linear-gradient(#001100,#005505,#00A900,#0000FF);
-    transform:translate(110px,20px)         
-}
 
 .container{
     display: flex;
@@ -157,3 +150,28 @@ section{
     width: 150px;
 }
 
+.heading{
+
+    width: 85%;
+    height: 10%;
+    border: 2px solid red;
+    background-image: 
+             linear-gradient(#001100,#005505,#00A900,#0000FF);
+    transform:translate(140px,20px)   
+      
+}
+.page-head{
+
+    color: aqua;
+    text-align: center;
+    transform: translateY(20px);
+    border: inherit;
+    border-radius: 15px 15px 15px 15px;
+}
+.foot-3-col{
+
+    height: 300px;
+    column-count: 3;
+    column-width: 100px;
+column-rule: 1px solid blue;
+}
