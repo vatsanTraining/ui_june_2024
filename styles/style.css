@@ -132,3 +132,28 @@ section{
     transform:translate(120px,20px)         
 }
 
+.container{
+    display: flex;
+    justify-content:center;
+
+}
+.custom-transform{
+
+    width: 100px;
+    height: 100px;
+    border: 3px solid salmon;
+    border-radius:  15px;
+    /* transform: rotate(15deg); */
+    /* transform: scale(0.8); */
+     /* transform: skewX(5deg);  */
+     /* transform: translateX(420px); */
+
+     transition: width 3s;
+
+}
+
+.custom-transform:hover{
+
+    width: 150px;
+}
+
