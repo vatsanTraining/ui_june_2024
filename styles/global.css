@@ -5,8 +5,11 @@
 
 .min-width{
 
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 60px;
+    float: left;
+    transform: translate(0,10px);
+
 
 }
 #firstPara{
@@ -52,10 +55,9 @@ tr,td,th{
     font-size: 1.3em;
 }
 
-.nav{
+nav{
 
-    height: 30px;
-    background-color: black;
+    height: 40px;
 }
 .footer-min{
 
@@ -66,11 +68,14 @@ tr,td,th{
 a{
     text-decoration: none;
     margin: 10px ;
-    color: wheat;
+    color: blue;
 }
 
 .head-2x{
 
     text-align: center;
     color: #AA5577;
+    display: inline-block;
+
 }
+
