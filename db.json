@@ -1,0 +1,18 @@
+{
+    "students":[
+     {
+        "id":"101",
+        "subject":"maths",
+        "studentName":"ramesh",
+        "mark":90
+     },
+     {
+        "id":"102",
+        "subject":"science",
+        "studentName":"rajesh",
+        "mark":92
+     }
+
+    ]
+}
+

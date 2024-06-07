@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+
+// load event is fired after the document is ready
+        $(window).on('load',function () {
+
+            alert('load event called')
+        })
+
+        // ready event will be fired  as soon as the dom tree is ready
+        $(document).ready(function () {
+
+            alert('on ready called')
+            $("#page-head").html("<h1>Learning jQuery</h1>")
+
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <header id="page-head"></header>
+
+</body>
+
+</html>
