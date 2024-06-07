@@ -173,5 +173,6 @@ section{
     height: 300px;
     column-count: 3;
     column-width: 100px;
-column-rule: 1px solid blue;
+  column-rule: 1px solid blue;
+  -webkit-column-break-after: auto;
 }

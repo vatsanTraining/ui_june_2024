@@ -2,6 +2,15 @@
 var appointment = {}
 
 
+appointment.tableEntry =[];
+
+appointment.addEntry =function(data){
+
+    appointment.tableEntry.push(data)
+
+    console.log
+    return appointment.tableEntry;
+}
 appointment.attachEvent = function(){
 
     let form = document.querySelector('form')
@@ -23,20 +32,25 @@ appointment.attachEvent = function(){
         let slno =form.slno.value
         let doctorName =form.doctorName.value
         let timing = form.timing.value
-        let extra = form.extra.value
-        let rowData = {slno:slno,doctorName:doctorName,timing:timing,extra:extra}
+        let rowData = {slno:slno,doctorName:doctorName,timing:timing}
 
-        appointment.createTable(rowData)
+        appointment.addEntry(rowData)
+        console.log(rowData)
      })
 
 
      addFldElement.addEventListener('click',function(){
+
+        let extraLabel = document.createElement('label');
+        extraLabel.textContent="Additonal Info"
 
         let inputFld = document.createElement('input');
       inputFld.setAttribute('type','text')
       inputFld.setAttribute('name','extra')
       inputFld.setAttribute('id','extra')
 
+          
+           form.append(extraLabel)
            form.append(inputFld)
 
      })
@@ -63,6 +77,8 @@ appointment.createList = function(list,parentNode,listType){
 }
 appointment.createRow = function(data){
 
+
+
     const tableRow = document.createElement("tr")
 
     let columns = Object.keys(data);
@@ -77,13 +93,28 @@ appointment.createRow = function(data){
 
     let tdele =document.createElement('td')
     let deleButton = document.createElement('button')
-    deleButton.textContent ='Delete'
+    deleButton.textContent="Delete"
+    deleButton.setAttribute('data-id',data)
     tdele.appendChild(deleButton)
+    
+  var updatedArray=[]
+    deleButton.addEventListener('click',function(){
 
-    tdele.addEventListener('click',function(){
+           let nameToDelete =    this.dataset.id;
+        
+           console.log(nameToDelete.doctorName)
 
-        alert('delete called')
+
+          updatedArray = tableEntry.filter((ele)=>{
+
+            ele.doctorName===nameToDelete
+           })
+
+           console.log(updatedArray)
+
+
     })
+
 
     tableRow.append(tdele)
 
@@ -101,6 +132,7 @@ appointment.createTable = function(...tableData)
 
 
     })
+
      
 }
     
