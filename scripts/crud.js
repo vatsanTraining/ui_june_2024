@@ -1,7 +1,7 @@
 var crud =(function(){
 
     tableEntry =[];
-
+    var idxPos=0
     attachEvent = function(){
 
         let form = document.querySelector('form')
@@ -21,12 +21,79 @@ var crud =(function(){
 
             addEntry(rowData)
          } else {
-            alert('Edit action to be performed here')
+
+            console.log('inside edit block')
+            let slno =form.slno.value
+            let doctorName =form.doctorName.value
+            let timing = form.timing.value
+            let rowData = {slno:slno,doctorName:doctorName,timing:timing}
+
+            tableEntry[idxPos]=rowData
+            let updatedRow=renderRow(rowData)
+            let rowToUpdate =document.querySelector('table').rows[idxPos]
+
+            let parent = document.querySelector('table>tbody');
+
+            
+            parent.replaceWith(rowToUpdate,updatedRow)
+
+           let editButton = createButton(parent,rowData,"Edit")
+           let delButton = createButton(parent,rowData,"Delete")
+
+           updatedRow.append(editButton)
+           updatedRow.append(delButton)
          }
 
          })
     }    
 
+    handleClickToEdit =function(editButton){
+
+        let data =editButton.getAttribute('data-element')
+
+
+        editButton.addEventListener('click',function(){
+
+
+            const elemToEdit = tableEntry.find((entry) => entry.slno === data);
+    
+            console.log(elemToEdit)
+    
+                      idxPos = tableEntry.indexOf(elemToEdit);
+    
+    
+            let form = document.querySelector('form')
+    
+            form.slno.value =elemToEdit.slno
+            form.doctorName.value=elemToEdit.doctorName
+            form.timing.value=elemToEdit.timing
+        
+            let triggerButton = document.querySelector('#addBtn')
+            triggerButton.textContent = 'Edit';
+    
+        })
+    
+    
+    }
+
+    handleClickToDel = function(delButton){
+
+        let data =delButton.getAttribute('data-element')
+
+        delButton.addEventListener('click',function(){
+
+
+            const elemToDelete = tableEntry.find((entry) => entry.slno === data.slno);
+            tableEntry.splice(tableEntry.indexOf(elemToDelete),1)
+    
+    
+            let table = document.querySelector('table')
+            table.deleteRow(this.parentNode.rowIndex);
+    
+    
+        })
+    
+    }
 addEntry =function(data){
 
     tableEntry.push(data)
@@ -37,41 +104,14 @@ addEntry =function(data){
 
     editButton = createButton(row,data.slno,"Edit") 
 
-
-    editButton.addEventListener('click',function(){
-
-
-        const elemToEdit = tableEntry.find((entry) => entry.slno === data.slno);
-
-        console.log(elemToEdit)
-
-        let form = document.querySelector('form')
-
-        form.slno.value =elemToEdit.slno
-        form.doctorName.value=elemToEdit.doctorName
-        form.timing.value=elemToEdit.timing
-    
-        let triggerButton = document.querySelector('#addBtn')
-        triggerButton.textContent = 'Edit';
-
-    })
+    handleClickToEdit(editButton)
 
    delButton=createButton(row,data.slno,"Delete")
 
-    delButton.addEventListener('click',function(){
+   handleClickToDel(delButton)
 
-
-        const elemToDelete = tableEntry.find((entry) => entry.slno === data.slno);
-        tableEntry.splice(tableEntry.indexOf(elemToDelete),1)
-
-
-        let table = document.querySelector('table')
-        table.deleteRow(this.parentNode.rowIndex);
-
-
-    })
-
-    reset()
+    
+   // reset()
     return tableEntry;
 }
 
@@ -100,6 +140,8 @@ renderRow = function(...tableData)
    return row;
      
 }
+
+
 
 createRow = function(data){
 

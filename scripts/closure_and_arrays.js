@@ -23,7 +23,7 @@ var obj =(function(){
 
 // arrayExampleOne();   reference error not accessible
 
-// obj()
+obj()
 
 
 function outer(){
@@ -57,10 +57,10 @@ function createInc(startValue) {
      }; 
 }
 
-//  const funcRef = createInc(10)
+ const funcRef = createInc(10)
 
-//  console.log(funcRef(5))
-//  console.log(funcRef(15))
+ console.log(funcRef(5))
+ console.log(funcRef(15))
 
 
 const printArray =(array) =>{

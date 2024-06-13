@@ -23,6 +23,12 @@
       "mark": "23",
       "subject": "Science",
       "studentName": "Guru"
+    },
+    {
+      "id": "8977",
+      "mark": "100",
+      "subject": "Biology",
+      "studentName": "NewStudents"
     }
   ]
 }
