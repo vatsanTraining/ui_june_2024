@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            justify-content: center;
+            border: 1px solid blue;
+        }
+
+        .child>img {
+            border: 2px solid blue;
+
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="child"><img src="images/doctor1.png" class="logo"></div>
+        <div class="child"><img src="images/doctor2.png" class="logo"></div>
+        <div class="child"><img src="images/doctor3.png" class="logo"></div>
+
+        <div class="child"><img src="images/doctor4.png" class="logo"></div>
+        <div class="child"><img src="images/doctor5.png" class="logo"></div>
+
+    </div>
+</body>
+
+</html>

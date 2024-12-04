@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            align-items: center;
+            width: 75%;
+            height: 75%;
+            border: 5px solid yellowgreen;
+
+        }
+
+        .child {
+            width: 20px;
+            height: 20px;
+            border: 2px solid blue;
+        }
+        .child:first-child{
+            flex-basis: 30px;
+        }
+        .child:last-child{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>

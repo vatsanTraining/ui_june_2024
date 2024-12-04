@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+
+            font-size: 20px;
+        }
+
+        body {
+            counter-reset: chap_id 7;
+        }
+
+        .outer {
+
+            font-size: 10px;
+        }
+
+        .inner {
+            font-size: 2em;
+        }
+
+        .content {
+            font-size: 2rem;
+        }
+
+        .parent {
+
+            height: 10vmin;
+            width: 10vmin;
+            background: #0f0;
+        }
+
+        .child {
+
+            width: 50%;
+            height: 50%;
+            background-color: blue;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+
+        h2::before {
+            counter-increment: chap_id;
+            content: "Chapter " counter(chap_id) ": ";
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p class="content">this uses rem unit- Size will be 32* 2 =64px </p>
+
+    <div class="outer">
+        <p class="inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum obcaecati a nemo perspiciatis
+            magnam nostrum earum, sint sed corporis quis voluptatum quisquam aperiam, fugiat deleniti sunt facere
+            necessitatibus nam ullam? - it will be 10 X 2 =20px</p>
+    </div>
+
+    <div class="parent">
+        <p>Parent</p>
+        <div class="child">
+            <p>Child</p>
+        </div>
+    </div>
+    <div>
+
+        <h2>A Result and a Prologue</h2>
+
+        <h2>An Antecedent and a Horror</h2>
+
+        <h2>A Search and an Evocation</h2>
+
+        <h2>A Mutation and a Madness</h2>
+
+        <h2>A Nightmare and a Cataclysm</h2>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quia error? Aperiam culpa, iure
+        incidunt commodi praesentium impedit blanditiis odio modi, possimus dolor sequi cumque nulla fuga ducimus
+        voluptatem dolorem?
+    </p>
+    <button id="btn1">Hide</button>
+
+
+    <div>
+        Some More Div
+    </div>
+    <button id="btn2">Hide</button>
+
+
+    <script>
+
+
+        document.getElementById('btn1').addEventListener('click', function () {
+
+            toggle(this.id)
+        })
+
+        document.getElementById('btn2').addEventListener('click', function () {
+
+            toggle(this.id)
+        })
+
+
+        function toggle(btnId) {
+
+            var btnRef = document.getElementById(btnId)
+
+
+            var para = btnRef.previousElementSibling
+
+            var btnVal = btnRef.innerHTML
+
+            if (btnVal == 'Hide') {
+
+                para.style.display = 'none'
+                btnRef.innerHTML = 'Show'
+
+            }
+            if (btnVal == 'Show') {
+
+                para.style.display = 'block'
+                btnRef.innerHTML = 'Hide'
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

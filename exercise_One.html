@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise -One</title>
+</head>
+<style>
+    html {
+
+        background-color: #000000;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #ffffff;
+        width: 100%;
+
+    }
+
+    ul>li {
+        display: inline;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+        margin-left: 40px;
+    }
+
+    .med-pict {
+
+        width: 250px;
+        height: 250px;
+        border: 1px solid burlywood;
+        border-radius: 10px;
+    }
+
+    .btn-main {
+
+        font-size: 1.2em;
+        background-color: lightblue;
+        border: 1px solid red;
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 250px;
+        max-height: 100px;
+        transform: translateY(20px);
+    }
+
+    .btn-main:hover {
+        box-shadow: 0 0 0 8px #5a01a7;
+    }
+</style>
+
+<body>
+
+    <nav>
+
+        <h1>Company Name</h1>
+        <ul>
+            <li><a href="http://">Home</a></li>
+            <li><a href="http://">Downloads</a></li>
+            <li><a href="http://">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+
+
+        <h1>An Apple A Day</h1>
+
+        <img src="images/apple.jpeg" alt="medicine" class="med-pict">
+
+        <h1>Keeps the Doctor Away</h1>
+
+        <button class="btn-main" type="button">Shop Now</button>
+
+    </header>
+
+</body>
+
+</html>

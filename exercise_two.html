@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <style>
+        body {
+            min-height: 100vh;
+            background: url(images/table_background.jpeg) center / cover;
+        }
+
+
+        td img {
+            width: 36px;
+            height: 36px;
+            margin-right: .5rem;
+            border-radius: 50%;
+
+            vertical-align: middle;
+        }
+
+        .table_header {
+            height: 10%;
+            background-color: #fff4;
+            padding: .8rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .table_body {
+            background-color: #fffb;
+            margin: .8rem auto;
+            border-radius: .6rem;
+
+            overflow: auto;
+            overflow: overlay;
+            display: flex;
+            align-items: center;
+
+        }
+
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            padding: 1rem;
+            justify-content: space-around;
+
+
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #d5d1defe;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #0000000b;
+        }
+
+        .status {
+            padding: .4rem 0;
+            border-radius: 2rem;
+            text-align: center;
+        }
+
+        .status.delivered {
+            background-color: #86e49d;
+            color: #006b21;
+        }
+
+        .status.cancelled {
+            background-color: #d893a3;
+            color: #b30021;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <em>Hello world</em>
+        <h1 class="table_header">Customer Order Details</h1>
+    </section>
+    <section class="table_body">
+
+        <table>
+            <thead>
+                <th>Id</th>
+                <th style="width: 30%;">Customer</th>
+                <th>Location</th>
+                <th>Status</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> 1</td>
+                    <td><img src="images/customer.jpeg" alt=""> Ramesh </td>
+                    <td> Chennai </td>
+                    <td>
+                        <p class="status cancelled">Cancelled</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+</body>
+
+</html>
